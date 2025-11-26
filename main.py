@@ -1,9 +1,21 @@
-# Find the computer must find the square root of the number given
+# write a pythone code to create two classes bmw and ferrari  with similar methodes and imbliment polymorhisim on them
+# Parent class (optional but good for beginners)
+class Car:
+    def start_engine(self):
+        pass
+class BMW(Car):
+    def start_engine(self):
+        print("BMW engine started with a smooth purr.")
 
-num = int(input("Enter a number so that we can find the square root "))
-num2 = num ** 0.5
+class Ferrari(Car):
+    def start_engine(self):
+        print("Ferrari engine started with a loud roar!")
 
-if num2.is_integer(): 
-    print("The square root of", num, "is", int(num2))
-else:
-    print("It's not a perfect square.")
+def test_drive(car):
+    car.start_engine()
+
+bmw_car = BMW()
+ferrari_car = Ferrari()
+
+test_drive(bmw_car)
+test_drive(ferrari_car)
